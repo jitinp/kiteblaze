@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+     <!-- Bootstrap -->
+     <link rel='stylesheet' href='/stylesheets/bootstrap/narrow-jumbotron.css' />
+     <link rel='stylesheet' href='/stylesheets/bootstrap/bootstrap-social.css' />
+     <link href="/stylesheets/bootstrap/font-awesome.css" rel="stylesheet">
+  
+
+     <link rel="stylesheet" href="stylesheets/signup-form.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  </head>
+  <body>
+
+  	<!-- Navbars -->
+  	<div class="container">
+	 <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/deploy">Deploy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/about">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#at-login">Sign-in</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Kiteblaze</h3>
+      </header>
+
+<!-- Modals for Login & Registration pop-ups -->
+<% include modals/header-modal %>	
+  <% include modals/login-modal %>
+  <% include modals/register-modal %>
+  <% include modals/forgotpassword-modal %>
+<% include modals/footer-modal %>
+
+	<main role="main">
+
+

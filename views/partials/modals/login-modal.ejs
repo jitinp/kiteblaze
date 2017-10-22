@@ -1,0 +1,53 @@
+<!-- MODAL LOGIN -->
+                <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                
+                            </div>
+                            <div class="modal-body">
+                                <button class="btn btn-block btn-social btn-lg btn-github" onclick=""><i class="fa fa-github"></i>Sign in with GitHub</button><br>
+                                        <div class="signup-or-separator">
+                                            <span class="h6 signup-or-separator--text">or</span>
+                                            <hr>
+                                        </div>
+                                        <form action="/signup/login" method="post">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control-form " id="exampleInputEmaillog" placeholder="Email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control-form " id="exampleInputPasswordpas" placeholder="Password" name="password">
+                                            </div>
+                                            <div class="row">   
+                                                <div class="col-md-6">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Remember me
+                                                        </label>
+                                                    </div>  
+                                                </div>
+                                                <div class="col-md-4 col-md-offset-2">  
+                                                    <p class="frgt-pswd"   data-toggle="modal" data-dismiss="modal"  data-target="#at-reset-pswd">  Forgot Password ?</p>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn-lgin">Login</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="row">   
+                                            <div class="col-md-8">
+                                                <p class="ta-l">Don't have an account ? </p>
+                                            </div>  
+                                            <div class="col-md-4 col-md-offset-2">  
+                                                <button class="btn-gst"  data-toggle="modal"  data-dismiss="modal" data-target="#at-signup-filling" >Sign Up </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MODAL LOGIN ENDS -->
