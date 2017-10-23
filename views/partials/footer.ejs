@@ -25,6 +25,57 @@ var hash = window.location.hash;
           $("#at-signup-filling").modal();
     }
 });
+
+$(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+    
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+        var $target = $(e.target);
+        console.log("Hey");
+        if ($target.parent().hasClass('disabled')) {
+            return false;
+        }
+
+    });
+    
+
+    $(".next-step").click(function (e) {
+        console.log("Next clicked");
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.removeClass('active');
+        $active.addClass('disabled');
+
+        $active.next().removeClass('disabled');
+        $active.next().addClass('active');
+
+        nextTab($active);
+
+    });
+    $(".prev-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.removeClass('active');
+        $active.addClass('disabled');
+
+        $active.prev().removeClass('disabled');
+        $active.prev().addClass('active');
+
+        prevTab($active);
+
+    });
+});
+
+function nextTab(elem) {
+    console.log("Next");
+    $(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    console.log("Prev");
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+}
 </script>
 
 </body></html>
