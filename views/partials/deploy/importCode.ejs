@@ -1,0 +1,26 @@
+<!-- form for submitting Git Repo Link -->
+<div class="container">
+<form role="gitRepoLink" action="/deploy/code" method="post">
+  <div class="form-group">
+    <label for="gitRepoLink1">Git repo link</label>
+    <input type="" class="form-control" id="gitRepoLink1" aria-describedby="gitRepoLinkHelp" placeholder="Enter Git repo link" name="repolink">
+    <small id="gitRepoLinkHelp" class="form-text text-muted">Enter the complete URL.</small>
+  </div>
+  <div class="form-group">
+    <label for="stackSelect1">Select your Tech Stack</label>
+    <select class="form-control" id="stackSelect1">
+      <option>Node-js Express</option>
+      <option>PHP Laravel</option>
+      <option>Wordpress</option>
+      <option>Angularjs</option>
+      <option>React</option>
+    </select>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Next</button>
+</form>
+</div>
+
+<!-- Log for displaying progress -->
+<!-- should be in separate file -->
+<samp >-------- log will appear here --------------</samp>

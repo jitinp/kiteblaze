@@ -40,14 +40,12 @@
                 </ul>
             </div>
 
-        <form role="form">
+        
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
                         <h4 class="jumbotron-heading">1. Import your code</h4>
                         <p>Link Git repo and import all your code.</p>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-                        </ul>
+                        <% include partials/deploy/importCode %>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <h4 class="jumbotron-heading">2. Configure Database</h4>
@@ -72,7 +70,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-            </form>
+            
 
         </div>
     </section>
