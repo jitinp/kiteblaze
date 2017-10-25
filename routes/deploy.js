@@ -8,6 +8,23 @@ router.get('/', function(req, res, next) {
 
 router.post('/code', function(req, res, next) {
 	console.log("Git repo link: " + req.body.repolink);
+
+	// Decide name for GIT repo Directory if doesn't exist
+
+	// Store Directory name in DB
+
+	// Create Directory
+
+	// Pull code
+
+	// Confirm if pulled successfully
+
+	// Verify Git pull
+
+	// If all good push message to Screen Flash
+
+	// Enable Next button
+
 	return;
 })
 
