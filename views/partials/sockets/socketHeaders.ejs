@@ -1,0 +1,16 @@
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- all Live changes from Sockets goes here -->
+<script>
+    $(document).ready(function(){
+          var socket = io();
+
+          $("#click").click(function(){
+            socket.emit('status added',$("#comment").val());
+          });
+          
+          socket.on('refresh feed',function(msg){
+            $("#logs").append(msg);
+          });
+    });
+</script>
