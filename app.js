@@ -23,13 +23,16 @@ require("./config/passport")(passport);
 var index = require('./routes/index');
 var about = require('./routes/about');
 
-// // Pass Passport to User Routers to authenticate
+// Pass Passport to User Routers to authenticate
 var signup = require('./routes/signup')(passport);
 
 var contact = require('./routes/contact');
 var deploy = require('./routes/deploy');
 
 var app = express();
+
+// Socket io ----------------------------
+app.io = require('socket.io')();
 
 // view engine setup --------------------------
 app.set('views', path.join(__dirname, 'views'));
@@ -59,7 +62,7 @@ app.use('/', index);
 app.use('/about', about);
 app.use('/signup', signup);
 app.use('/contact', contact);
-app.use('/deploy', deploy);
+app.use('/deploy', deploy(app.io)); // pass socket io to Deploy route
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

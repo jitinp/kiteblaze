@@ -1,31 +1,42 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET about page. */
-router.get('/', function(req, res, next) {
-  res.render('deploy', { title: 'Kiteblaze | Deploy apps automatically', page: 'about' });
-});
 
-router.post('/code', function(req, res, next) {
-	console.log("Git repo link: " + req.body.repolink);
+module.exports = function(io) {
 
-	// Decide name for GIT repo Directory if doesn't exist
+	/* GET about page. */
+	router.get('/', function(req, res, next) {
+		console.log(io, "Hey.. socket.io.. " + io);
 
-	// Store Directory name in DB
+		// code to test IO
+		io.emit("logs", "crawling in my skin.. ");
 
-	// Create Directory
+		res.render('deploy', { title: 'Kiteblaze | Deploy apps automatically', page: 'about' });
+		return;
+	});
 
-	// Pull code
+	router.post('/code', function(req, res, next) {
+		console.log("Git repo link: " + req.body.repolink);
 
-	// Confirm if pulled successfully
+		// Decide name for GIT repo Directory if doesn't exist
 
-	// Verify Git pull
+		// Store Directory name in DB
 
-	// If all good push message to Screen Flash
+		// Create Directory
 
-	// Enable Next button
+		// Pull code
 
-	return;
-})
+		// Confirm if pulled successfully
 
-module.exports = router;
+		// Verify Git pull
+
+		// If all good push message to Screen Flash
+
+		// Enable Next button
+
+		return;
+	})
+
+	return router;
+}
+

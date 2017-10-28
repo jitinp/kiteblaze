@@ -27,8 +27,7 @@ body {
 
 /* Custom page footer */
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
   padding-top: 1.5rem;
   color: #777;
