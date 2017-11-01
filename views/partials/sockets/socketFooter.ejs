@@ -8,7 +8,7 @@
           });
           
           socket.on('logs',function(msg){
-            $('#logs').append('<samp>' + msg + '</samp><br>');
+            $('#logs').prepend('<samp>' + msg + '</samp><br>');
           });
     });
 </script>

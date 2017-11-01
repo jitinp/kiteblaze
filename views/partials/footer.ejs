@@ -28,7 +28,7 @@ var hash = window.location.hash;
 
 $(document).ready(function () {
     //Initialize tooltips
-    $('.nav-tabs > li a[title]').tooltip();
+    //$('.nav-tabs > li a[title]').tooltip();
     
     //Wizard
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -77,6 +77,9 @@ function prevTab(elem) {
     $(elem).prev().find('a[data-toggle="tab"]').click();
 }
 </script>
+
+<!-- prevent page reload after submitting Repo link -->
+<% include deploy/repoCloneSuccessStatus.ejs %>
 
 <!-- socket logs script -->
 <!-- later add condition to check if socket required -->

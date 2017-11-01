@@ -3,15 +3,15 @@ var mongoose = require('mongoose');
 
 
 var application = mongoose.Schema({
-	name        : String,
-    folderName     : String,
-    gitRepoLink     : String,
-    lastUpdated     : String,
+	name: String,
+    folderName: String,
+    gitRepoLink: String,
+    lastUpdated: { type: Date, default: Date.now },
     created_at: { type: Date, default: Date.now },
     changed_at: { type: Date, default: Date.now }
 });
 
-var db = mongoose.Schema({
+var dbDetails = mongoose.Schema({
 	name: String,
     type: String,
     host: String,
@@ -23,11 +23,11 @@ var db = mongoose.Schema({
 })
 
 // define the schema for our user model
-var repoSchema = mongoose.Schema({
+var appSchema = mongoose.Schema({
 
     projectName: String,
     applications: [application],
-    dbs: [db],
+    dbs: [dbDetails],
     created_at: { type: Date, default: Date.now },
     changed_at: { type: Date, default: Date.now }
 });
@@ -36,4 +36,4 @@ var repoSchema = mongoose.Schema({
 
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('deployRepoModel', repoSchema);
+module.exports = mongoose.model('appModel', appSchema);

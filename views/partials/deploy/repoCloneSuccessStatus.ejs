@@ -1,0 +1,24 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+	    $('#repoForm').submit(function(event) {
+	        event.preventDefault(); // Stops browser from navigating away from page
+	        
+			var fd = new FormData($(this)[0]);
+			var $nextButton = $('#nextSubmit');
+
+	        $.ajax({
+            url: '/deploy/code',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function(data){
+                console.log(data + 'lala');
+                $( "#nextSubmit" ).prop('disabled', false);
+            }
+        });
+	       
+	    });
+	});
+</script>

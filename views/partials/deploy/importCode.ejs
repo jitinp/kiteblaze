@@ -1,6 +1,6 @@
 <!-- form for submitting Git Repo Link -->
 <div class="container">
-<form role="gitRepoLink" action="/deploy/code" method="post">
+<form role="gitRepoLink" action="/deploy/code" method="post" id="repoForm">
   <div class="form-group">
     <label for="gitRepoLink1">Git repo link</label>
     <input type="" class="form-control" id="gitRepoLink1" aria-describedby="gitRepoLinkHelp" placeholder="Enter Git repo link" name="repolink">
@@ -18,8 +18,8 @@
   </div>
   
   <container>
-    <button type="submit" class="btn btn-primary" name="repoSubmit" >Submit</button>
-    <button type="button" class="btn btn-primary float-right" name="nextSubmit" disabled>Next</button>
+    <button type="submit" class="btn btn-primary" id="repoSubmit" >Submit</button>
+    <button type="button" class="btn btn-primary float-right" id="nextSubmit" disabled>Next</button>
   <container>
 </form>
 </div>

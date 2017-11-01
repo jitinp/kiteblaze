@@ -17,6 +17,7 @@
     "method-override": "~2.3.6",
     "mongoose": "~4.6.1",
     "morgan": "~1.9.0",
+    "nodegit": "^0.20.3",
     "nodemon": "^1.12.1",
     "passport": "~0.3.2",
     "passport-facebook": "~2.1.1",
@@ -24,6 +25,8 @@
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.4",
     "serve-favicon": "~2.4.5",
-    "socket.io": "^2.0.4"
+    "simple-git": "^1.80.1",
+    "socket.io": "^2.0.4",
+    "uniqid": "^4.1.1"
   }
 }
