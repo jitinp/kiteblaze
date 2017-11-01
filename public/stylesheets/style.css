@@ -150,3 +150,9 @@ span.round-tab:hover {
         left: 35%;
     }
 }
+
+
+/******** Folder UI ***********/
+.table-foldersystem tbody tr td:first-child{
+  width:1%;
+}

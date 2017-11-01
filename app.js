@@ -28,6 +28,7 @@ var signup = require('./routes/signup')(passport);
 
 var contact = require('./routes/contact');
 var deploy = require('./routes/deploy');
+var folder = require('./routes/folder');
 
 var app = express();
 
@@ -60,6 +61,7 @@ app.use('/about', about);
 app.use('/signup', signup);
 app.use('/contact', contact);
 app.use('/deploy', deploy);
+app.use('/folder', folder);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
