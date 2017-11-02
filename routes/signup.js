@@ -9,7 +9,7 @@ module.exports = function(passport) {
 	});
 
 	router.post('/login', passport.authenticate('login', {
-		    successRedirect: '/',
+		    successRedirect: '/deploy',
 		    failureRedirect: '/#loginforce',
 		    failureFlash : true 
 		  }));
@@ -19,6 +19,11 @@ module.exports = function(passport) {
             failureRedirect : '/#registerforce', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
+
+	router.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/#');
+    });
 
 	return router;
 }

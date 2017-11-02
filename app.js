@@ -24,7 +24,7 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 
 // Pass Passport to User Routers to authenticate
-var signup = require('./routes/signup')(passport);
+var signup = require('./routes/signup');
 
 var contact = require('./routes/contact');
 var deploy = require('./routes/deploy');
@@ -60,7 +60,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // Link Routes ---------------------------------
 app.use('/', index);
 app.use('/about', about);
-app.use('/signup', signup);
+app.use('/signup', signup(passport));
 app.use('/contact', contact);
 app.use('/deploy', deploy(app.io)); // pass socket io to Deploy route
 
